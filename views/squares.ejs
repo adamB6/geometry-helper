@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>This is a tool for entering the side length of a square<br>
+    and viewing the areas and perimeters of the square. Just enter<br>
+the length of a side and press calculate to see your results.</p>
+    <hr>
+    <form action="/squares" method="get">
+        <p>
+            <label>Side Length</label><br>
+            <input type="number" name="side_length" min="1" required>
+        </p>
+        <div style="text-align: center">
+            <input type="submit" value="Calculate" >
+        </div>
+        <hr>
+    </form>
+        <% let sideLength = formData.side_length; %>
+        <% sideLength = sideLength ? parseInt(sideLength) : 0; %>
+        <% if (sideLength) { %>
+            <h2>Results: </h2><br>
+            <div style="text-align: center">
+                <ul class="ul">
+                    <li>
+                        Side length = <%= sideLength %>
+                    </li>
+                    <li>
+                        Area = <%= sideLength * sideLength %>
+                    </li>
+                    <li>
+                        Perimeter = <%= sideLength * 4 %>
+                    </li>
+                </ul>
+            </div>
+        <% } %>
+    
+        <p>Return to the <a href="/">site index</a>.</p>
+  </body>
+</html>

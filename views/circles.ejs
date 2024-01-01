@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>This is a table of circles with their radii and corresponding areas and perimeters.</p>
+    <hr>
+    <div class="center">
+      <div class="scrollable-table">
+        <table>
+          <tr>
+            <th>Radius</th>
+            <th>Area</th>
+            <th>Perimeter</th>
+          </tr>
+          <% for (var i = 1; i <= 100; i++) { %>
+            <tr>
+              <td>Radius = <%= i %></td>
+              <td>Area = <%= i * Math.PI %></td>
+              <td>Perimeter = <%= 2 * Math.PI * i %></td>
+            </tr>
+          <% } %>
+        </table>
+      </div>
+      <div style="text-align: center;">
+        <p>Return to the <a href="/">site index</a>.</p>
+      </div>   
+    </div>
+  </body>
+</html>
+

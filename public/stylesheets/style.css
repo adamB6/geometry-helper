@@ -1,0 +1,61 @@
+/*
+Formulas elements
+*/
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+ul {
+margin-bottom: 15px;
+text-align: left;
+}
+
+.formula-list {
+  padding-left: 20px;
+}
+
+/*
+Circles elements
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.center {
+  text-align: center;
+}
+
+.scrollable-table {
+  max-height: 300px; /* Adjust the maximum height as needed */
+  overflow-y: scroll;
+}
